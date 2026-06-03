@@ -1704,7 +1704,12 @@ function BackToTop() {
 function PremiumCaseStudies() {
   const [active, setActive] = useState(0);
   const cs = CASE_STUDIES[active];
-  const project = PROJECTS[active] || PROJECTS[0];
+  const caseProjectMap = {
+    Zentodo: "Zentodo",
+    "Smart Helmet": "Smart Helmet Safety Portal",
+    Blockchain: "Blockchain Product Detector",
+  };
+  const project = PROJECTS.find((item) => item.title === caseProjectMap[cs.shortTitle]) || PROJECTS[0];
   const next = () => setActive((value) => (value + 1) % CASE_STUDIES.length);
   const previous = () => setActive((value) => (value - 1 + CASE_STUDIES.length) % CASE_STUDIES.length);
 
@@ -1717,7 +1722,7 @@ function PremiumCaseStudies() {
     <section id="case-studies" className="py-28 relative overflow-hidden">
       <GlowOrb className="w-96 h-96 bg-violet-800 bottom-0 right-0" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Selected Work" title={<>Execution craft,<br /><GradientText>from idea to ship</GradientText></>} />
+        <SectionHeading label="Selected Work" title={<>Project execution,<br /><GradientText>from idea to ship</GradientText></>} />
         <div className="mb-8 flex flex-wrap justify-center gap-3">
           {CASE_STUDIES.map((c, i) => (
             <button key={c.shortTitle || c.title} type="button" onClick={() => setActive(i)} className={`group relative overflow-hidden rounded-2xl px-5 py-3 text-sm font-bold transition-all ${active === i ? "border border-[#A78BFA]/40 bg-[#A78BFA]/15 text-white shadow-lg shadow-[#A78BFA]/10" : "border border-white/10 bg-white/[0.025] text-slate-400 hover:border-white/20 hover:text-white"}`}>
