@@ -16,10 +16,6 @@ import iipWebAppCover from "./assets/iip-web-app-cover.png";
 import watchGalleryCover from "./assets/watch-gallery-cover.png";
 import movieExperienceCover from "./assets/movie-experience-cover.png";
 import northloomCover from "./assets/northloom-cover.png";
-import certFullStackCover from "./assets/certificate-full-stack.svg";
-import certCareerEssentialsCover from "./assets/certificate-career-essentials.svg";
-import certPythonCover from "./assets/certificate-python.svg";
-import certUiuxCover from "./assets/certificate-uiux-design.svg";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
@@ -206,21 +202,18 @@ const CREDENTIAL_GROUPS = [
         issuer: "Certificate of Completion",
         impact: "Validated hands-on training across frontend, backend, and deployment-oriented web development workflows.",
         href: "/certificates/full-stack-developer-course.pdf",
-        image: certFullStackCover,
       },
       {
         title: "Career Essentials in Software Development",
         issuer: "Microsoft & LinkedIn Learning",
         impact: "Completed career-focused software development training covering engineering fundamentals and workplace practices.",
         href: "/certificates/career-essentials-software-development.pdf",
-        image: certCareerEssentialsCover,
       },
       {
         title: "Python Programming Certificate",
         issuer: "Course Completion Credential",
         impact: "Strengthened Python fundamentals used across backend logic, automation, and problem-solving workflows.",
         href: "/certificates/python-certificate.pdf",
-        image: certPythonCover,
       },
     ],
   },
@@ -233,7 +226,6 @@ const CREDENTIAL_GROUPS = [
         issuer: "Design Learning Credential",
         impact: "Strengthened interface design, visual hierarchy, and user-centered product thinking for web experiences.",
         href: "/certificates/jerin-tv-2025-06-10.pdf",
-        image: certUiuxCover,
       },
     ],
   },
@@ -556,9 +548,9 @@ function Hero() {
       {/* Animated grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start w-full">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
         {/* Left */}
-        <div className="lg:pl-10 xl:pl-16 text-left">
+        <div className="order-2 lg:order-1 lg:pl-10 xl:pl-16 text-center lg:text-left">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -629,7 +621,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-          className="flex justify-center lg:justify-end items-center relative"
+          className="order-1 flex justify-center items-center relative lg:order-2"
         >
           <div className="hero-energy-field relative w-full max-w-[330px] sm:max-w-[390px] lg:max-w-[420px]">
             <motion.div
@@ -1245,13 +1237,14 @@ function Credentials() {
               <button
                 type="button"
                 onClick={() => setActiveCredential(credential)}
-                className="relative block aspect-[1.42/1] w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950"
+                className="relative block aspect-[1.42/1] w-full overflow-hidden rounded-2xl border border-white/10 bg-white"
                 aria-label={"View " + credential.title}
               >
-                <img
-                  src={credential.image}
-                  alt={credential.title + " preview"}
-                  className="h-full w-full object-cover"
+                <iframe
+                  title={credential.title + " preview"}
+                  src={credential.href + "#toolbar=0&navpanes=0&scrollbar=0&view=FitH"}
+                  tabIndex={-1}
+                  className="pointer-events-none h-full w-full border-0 bg-white"
                 />
               </button>
 
