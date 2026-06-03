@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import heroPhoto from "./assets/jerin-hero.jpeg";
 import zentodoCover from "./assets/zentodo-cover.png";
+import blockchainCover from "./assets/blockchain-cover.png";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
@@ -29,7 +30,7 @@ const SKILLS = {
 
 const PROJECTS = [
   { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed", image: zentodoCover, codeUrl: "https://github.com/JerinTV/TODO.git", demoUrl: "https://todo-kfdoya5n6-jerintvs-projects.vercel.app" },
-  { title: "Blockchain Product Detector", desc: "Role-based dashboards for 4 user types with NFC verification, product lifecycle viz, and hybrid on/off-chain data.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb" },
+  { title: "Blockchain Product Detector", desc: "Role-based dashboards for 4 user types with NFC verification, product lifecycle viz, and hybrid on/off-chain data.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb", image: blockchainCover, codeUrl: "https://github.com/JerinTV/blockchain.git", demoUrl: "https://supply-chain-1-0rut.onrender.com/" },
   { title: "Smart Helmet Safety Portal", desc: "Real-time IoT dashboard with live GPS map, speed telemetry, emergency alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669", demoUnavailable: true },
   { title: "AI SaaS Dashboard", desc: "Analytics dashboard with AI-powered insights, real-time charts, and a polished design system.", stack: ["React", "Python", "OpenAI", "PostgreSQL"], color: "#dc2626" },
   { title: "E-Commerce Platform", desc: "Full-featured store with cart, payments, inventory, and admin panel.", stack: ["React", "Django", "Stripe", "PostgreSQL"], color: "#d97706" },
