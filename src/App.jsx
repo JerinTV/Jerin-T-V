@@ -12,8 +12,6 @@ import heroPhoto from "./assets/jerin-hero.jpeg";
 
 const NAV_LINKS = ["About", "Skills", "Projects", "Case Studies", "GitHub", "Contact"];
 
-const TECH_BADGES = ["React", "Django", "Python", "JavaScript", "PostgreSQL", "Tailwind", "Git"];
-
 const STATS = [
   { label: "Projects Completed", value: 12, suffix: "+" },
   { label: "Technologies Learned", value: 20, suffix: "+" },
@@ -439,51 +437,25 @@ function Hero() {
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
           className="flex justify-center items-center relative"
         >
-          <div className="relative">
-            {/* Glow rings */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-600/40 to-blue-600/40 blur-2xl scale-110" />
+          <div className="relative w-full max-w-[420px]">
+            <div className="absolute -inset-8 rounded-[3rem] bg-[radial-gradient(circle_at_50%_35%,rgba(139,92,246,0.38),rgba(37,99,235,0.16)_42%,transparent_72%)] blur-2xl" />
+            <div className="absolute -inset-3 rounded-[2.75rem] bg-gradient-to-br from-white/16 via-violet-500/12 to-blue-500/10 rotate-3" />
+            <div className="absolute inset-6 rounded-[2.25rem] border border-white/10 -rotate-6" />
             <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-6 rounded-full border border-dashed border-violet-500/25"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-12 rounded-full border border-dashed border-blue-500/15"
-            />
-            {/* Portrait */}
-            <div className="relative w-72 h-72 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-[2rem] bg-gradient-to-br from-violet-900/60 to-blue-900/60 border border-violet-500/30 overflow-hidden shadow-2xl shadow-violet-900/50">
-              <img
-                src={heroPhoto}
-                alt="Jerin T V, web designer and full stack developer"
-                className="h-full w-full object-cover object-[50%_24%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050508]/35 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur-md">
-                <span className="text-sm font-semibold text-white">Designer & Developer</span>
-                <span className="text-xs font-mono text-violet-200">JerinTV</span>
+              whileHover={{ y: -6, rotate: -1 }}
+              transition={{ type: "spring", stiffness: 180, damping: 18 }}
+              className="relative aspect-[4/5] rounded-[2rem] border border-white/15 bg-[#090912] p-2 shadow-2xl shadow-violet-950/50"
+            >
+              <div className="relative h-full w-full overflow-hidden rounded-[1.55rem] bg-black">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/35 to-transparent z-10 pointer-events-none" />
+                <img
+                  src={heroPhoto}
+                  alt="Jerin T V, web designer and full stack developer"
+                  className="h-full w-full object-cover object-[50%_22%] saturate-110 contrast-105"
+                />
               </div>
-            </div>
-            {/* Floating badges */}
-            {TECH_BADGES.map((badge, i) => {
-              const angle = (i / TECH_BADGES.length) * Math.PI * 2 - Math.PI / 2;
-              const r = 175;
-              const x = Math.cos(angle) * r;
-              const y = Math.sin(angle) * r;
-              return (
-                <motion.div
-                  key={badge}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1, x: [0, Math.cos(angle) * 5, 0], y: [0, Math.sin(angle) * 5, 0] }}
-                  transition={{ delay: 0.8 + i * 0.1, x: { repeat: Infinity, duration: 3 + i, ease: "easeInOut" }, y: { repeat: Infinity, duration: 3 + i, ease: "easeInOut" } }}
-                  style={{ position: "absolute", left: "50%", top: "50%", transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))` }}
-                  className="px-3 py-1.5 rounded-full bg-[#0a0a12]/90 border border-violet-500/30 text-violet-300 text-xs font-mono whitespace-nowrap shadow-lg"
-                >
-                  {badge}
-                </motion.div>
-              );
-            })}
+            </motion.div>
           </div>
         </motion.div>
       </div>
