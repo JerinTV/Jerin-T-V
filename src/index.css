@@ -400,6 +400,19 @@ body {
   .profile-orbit-ring-two {
     display: none;
   }
+
+  .credential-track {
+    animation: none;
+    width: auto;
+  }
+
+  .credential-marquee {
+    overflow-x: auto;
+  }
+
+  .credential-track article {
+    min-width: 280px;
+  }
 }
 
 @keyframes galaxy-float-one {

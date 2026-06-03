@@ -550,7 +550,7 @@ function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
         {/* Left */}
-        <div className="order-2 lg:order-1 lg:pl-10 xl:pl-16">
+        <div className="order-2 lg:order-1 lg:pl-10 xl:pl-16 text-center lg:text-left">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1218,7 +1218,7 @@ function Credentials() {
           title={<>Proof wall<br /><GradientText>for the craft</GradientText></>}
         />
 
-        <div className="credential-marquee relative overflow-hidden">
+        <div className="credential-marquee relative overflow-x-auto overflow-y-hidden md:overflow-hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#050508] to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#050508] to-transparent" />
           <div className="credential-track flex w-max gap-5">
