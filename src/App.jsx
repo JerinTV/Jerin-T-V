@@ -556,9 +556,9 @@ function Hero() {
       {/* Animated grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start w-full">
+      <div className="max-w-7xl mx-auto px-6 flex items-start gap-6 w-full overflow-x-auto">
         {/* Left */}
-        <div className="lg:pl-10 xl:pl-16 text-left">
+        <div className="flex-1 min-w-0 lg:pl-10 xl:pl-16 text-left">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -589,13 +589,7 @@ function Hero() {
             transition={{ delay: 0.3 }}
             className="mb-6 h-8 text-2xl font-medium text-slate-300"
           >
-            <TypingText words={["UI/UX Designer", "Product Interface Designer", "Frontend Experience Designer", "Design-minded Developer"]} />
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+              <TypingText words={["UI/UX Designer", "Front-end Designer"]} />
             className="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg"
           >
             A UI/UX designer with frontend depth, shaping elegant visual systems, smooth micro-interactions, and premium web interfaces for products that need to stand out.
@@ -629,9 +623,9 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-          className="flex justify-center lg:justify-end items-center relative"
+          className="flex-shrink-0 w-[160px] sm:w-[220px] md:w-[300px] lg:w-[420px] flex items-center justify-end relative"
         >
-          <div className="hero-energy-field relative w-full max-w-[330px] sm:max-w-[390px] lg:max-w-[420px]">
+          <div className="hero-energy-field relative w-full">
             <motion.div
               aria-hidden="true"
               className="absolute inset-[8%] rounded-full bg-blue-500/20 blur-3xl scale-110"
