@@ -7,6 +7,7 @@ import {
   Cpu, Box, Cloud, Workflow, MessageSquare, User, BookOpen, TrendingUp
 } from "lucide-react";
 import heroPhoto from "./assets/jerin-hero.jpeg";
+import zentodoCover from "./assets/zentodo-cover.png";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
@@ -27,7 +28,7 @@ const SKILLS = {
 };
 
 const PROJECTS = [
-  { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed" },
+  { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed", image: zentodoCover },
   { title: "Blockchain Product Detector", desc: "Role-based dashboards for 4 user types with NFC verification, product lifecycle viz, and hybrid on/off-chain data.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb" },
   { title: "Smart Helmet Safety Portal", desc: "Real-time IoT dashboard with live GPS map, speed telemetry, emergency alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669" },
   { title: "AI SaaS Dashboard", desc: "Analytics dashboard with AI-powered insights, real-time charts, and a polished design system.", stack: ["React", "Python", "OpenAI", "PostgreSQL"], color: "#dc2626" },
@@ -632,10 +633,19 @@ function Projects() {
             >
               {/* Thumbnail */}
               <div className="relative h-40 overflow-hidden" style={{ background: `linear-gradient(135deg, ${p.color}22, ${p.color}08)` }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Code2 size={48} style={{ color: p.color }} className="opacity-30 group-hover:opacity-60 transition-opacity group-hover:scale-110 transition-transform duration-300" />
-                </div>
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.title} project cover`}
+                    className="h-full w-full object-cover object-left-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Code2 size={48} style={{ color: p.color }} className="opacity-30 group-hover:opacity-60 transition-opacity group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080810] to-transparent" />
+                {p.image && <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />}
                 <div className="absolute top-3 right-3 w-2 h-2 rounded-full" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}` }} />
               </div>
               <div className="p-5">
