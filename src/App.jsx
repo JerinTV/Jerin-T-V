@@ -6,6 +6,7 @@ import {
   Zap, Shield, Search, CheckCircle, Download, Send, Terminal, Globe,
   Cpu, Box, Cloud, Workflow, MessageSquare, User, BookOpen, TrendingUp
 } from "lucide-react";
+import heroPhoto from "./assets/jerin-hero.jpeg";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
@@ -451,12 +452,17 @@ function Hero() {
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
               className="absolute -inset-12 rounded-full border border-dashed border-blue-500/15"
             />
-            {/* Avatar */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-violet-900/60 to-blue-900/60 border-2 border-violet-500/30 flex items-center justify-center overflow-hidden shadow-2xl shadow-violet-900/50">
-              <div className="flex flex-col items-center gap-2 text-violet-300">
-                <div className="text-7xl font-black text-white/10 select-none">JT</div>
-                <Code2 size={48} className="text-violet-400 opacity-60" />
-                <span className="text-xs text-violet-300/60 font-mono">jerin@portfolio</span>
+            {/* Portrait */}
+            <div className="relative w-72 h-72 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-[2rem] bg-gradient-to-br from-violet-900/60 to-blue-900/60 border border-violet-500/30 overflow-hidden shadow-2xl shadow-violet-900/50">
+              <img
+                src={heroPhoto}
+                alt="Jerin T V, web designer and full stack developer"
+                className="h-full w-full object-cover object-[50%_24%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050508]/35 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur-md">
+                <span className="text-sm font-semibold text-white">Designer & Developer</span>
+                <span className="text-xs font-mono text-violet-200">JerinTV</span>
               </div>
             </div>
             {/* Floating badges */}
