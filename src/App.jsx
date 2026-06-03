@@ -581,7 +581,7 @@ function Hero() {
             transition={{ delay: 0.3 }}
             className="mb-6 h-8 text-2xl font-medium text-slate-300"
           >
-            <TypingText words={["UI/UX Designer", "Product Interface Designer", "Frontend Experience Designer", "Design-minded Developer"]} />
+            <TypingText words={["UI/UX Designer", "Frontend Designer", "Interface Designer", "Design-minded Developer"]} />
           </motion.div>
 
           <motion.p
@@ -641,10 +641,10 @@ function Hero() {
               viewBox="0 0 420 560"
               aria-hidden="true"
             >
-              <path className="hero-energy-path hero-energy-triangle-outer" pathLength="1000" d="M55 120 L365 120 L210 462 Z" />
-              <path className="hero-energy-path hero-energy-triangle-middle" pathLength="1000" d="M78 138 L342 138 L210 433 Z" />
-              <path className="hero-energy-path hero-energy-triangle-inner" pathLength="1000" d="M102 156 L318 156 L210 403 Z" />
-              <path className="hero-energy-comet hero-energy-triangle-comet" pathLength="1000" d="M55 120 L365 120 L210 462 Z" />
+              <path className="hero-energy-path hero-energy-triangle-outer" pathLength="1000" d="M212 34 C246 42 270 68 276 104 C312 112 334 139 330 176 C363 203 365 246 332 274 C349 322 327 363 288 382 C281 434 246 482 209 501 C165 476 133 435 125 385 C83 368 63 319 84 277 C48 247 52 202 85 176 C81 136 105 111 142 103 C148 66 176 40 212 34 Z" />
+              <path className="hero-energy-path hero-energy-triangle-middle" pathLength="1000" d="M213 58 C239 64 258 85 263 116 C294 122 312 145 307 176 C335 200 337 239 308 263 C324 304 303 338 270 355 C264 404 239 443 209 464 C176 442 153 405 147 358 C112 344 94 305 110 265 C82 241 84 202 112 178 C108 145 127 122 159 116 C164 86 187 64 213 58 Z" />
+              <path className="hero-energy-path hero-energy-triangle-inner" pathLength="1000" d="M211 88 C230 91 245 108 250 132 C273 137 287 154 284 178 C306 198 306 227 283 246 C294 278 278 305 252 318 C248 354 229 386 209 405 C185 386 168 356 164 320 C137 308 124 278 136 248 C114 228 116 199 138 180 C134 154 149 138 174 132 C178 108 192 91 211 88 Z" />
+              <path className="hero-energy-comet hero-energy-triangle-comet" pathLength="1000" d="M212 34 C246 42 270 68 276 104 C312 112 334 139 330 176 C363 203 365 246 332 274 C349 322 327 363 288 382 C281 434 246 482 209 501 C165 476 133 435 125 385 C83 368 63 319 84 277 C48 247 52 202 85 176 C81 136 105 111 142 103 C148 66 176 40 212 34 Z" />
             </svg>
             <motion.img
               src={heroPhoto}
@@ -677,10 +677,10 @@ function StatCard({ label, value, suffix }) {
 }
 
 function About() {
-  const profileTags = ["KTU 2026", "CGPA 8.68", "Full Stack", "UI/UX"];
+  const profileTags = ["KTU 2026", "CGPA 8.7", "Full Stack", "UI/UX"];
   const profileMetrics = [
     ["B.Tech CSE", "KTU 2026"],
-    ["CGPA", "8.68 / 10"],
+    ["CGPA", "8.7 / 10"],
     ["HSC", "96.4%"],
   ];
   const orbitItems = [
@@ -765,6 +765,8 @@ function About() {
                 <div className="profile-orbit-ring" aria-hidden="true" />
                 <div className="profile-orbit-ring profile-orbit-ring-two" aria-hidden="true" />
                 <div className="relative z-10 flex h-40 w-40 flex-col items-center justify-center rounded-full border border-[#A78BFA]/25 bg-[#0d0e16]/90 text-center shadow-[0_0_70px_rgba(167,139,250,0.18)]">
+                  <span className="j-mark-ring" aria-hidden="true" />
+                  <span className="j-mark-ring j-mark-ring-reverse" aria-hidden="true" />
                   <div className="bg-gradient-to-r from-violet-200 via-white to-blue-200 bg-clip-text text-6xl font-black text-transparent">J</div>
                 </div>
                 {orbitItems.map((item, i) => (
@@ -1115,17 +1117,18 @@ function GitHub() {
     <section id="github" ref={ref} className="py-28 relative overflow-hidden">
       <GlowOrb className="w-72 h-72 bg-[#A78BFA] top-0 left-0" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="GitHub" title={<>Open source &<br /><GradientText>contribution signal</GradientText></>} />
+        <SectionHeading label="GitHub" title={<>Engineering signal,<br /><GradientText>shipped in public</GradientText></>} />
 
-        <div className="grid lg:grid-cols-[0.95fr_1.45fr] gap-7">
+        <div className="grid lg:grid-cols-[0.9fr_1.5fr] gap-7">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-6 shadow-2xl shadow-black/30"
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-6 shadow-2xl shadow-black/30 transition-all hover:border-[#A78BFA]/35"
           >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_0%,rgba(167,139,250,0.18),transparent_42%)] opacity-70" />
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/55 to-transparent" />
-            <div className="mb-8 flex items-center gap-4">
+            <div className="relative mb-8 flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#A78BFA]/25 bg-[#A78BFA]/10 text-xl font-black text-[#A78BFA]">J</div>
               <div>
                 <div className="flex items-center gap-2 text-white font-bold text-lg"><Github size={18} /> JerinTV</div>
@@ -1133,7 +1136,20 @@ function GitHub() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="relative mb-6 grid grid-cols-7 gap-1.5">
+              {Array.from({ length: 28 }).map((_, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0.25, scaleY: 0.45 }}
+                  whileInView={{ opacity: [0.35, 1, 0.45], scaleY: [0.45, 1, 0.65] }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.018, duration: 1.1 }}
+                  className="h-8 origin-bottom rounded-md bg-gradient-to-t from-violet-500/20 to-blue-300/70"
+                />
+              ))}
+            </div>
+
+            <div className="relative grid grid-cols-3 gap-3">
               {[
                 { label: "Repos", value: repos, icon: <BookOpen size={16} /> },
                 { label: "Commits", value: contribs, icon: <GitFork size={16} /> },
@@ -1154,7 +1170,7 @@ function GitHub() {
               ))}
             </div>
 
-            <a href="https://github.com/JerinTV" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-600 to-blue-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-violet-900/30 transition-all hover:shadow-violet-900/50">
+            <a href="https://github.com/JerinTV" target="_blank" rel="noopener noreferrer" className="relative mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-600 to-blue-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-violet-900/30 transition-all hover:shadow-violet-900/50">
               View all repositories
               <ExternalLink size={16} />
             </a>
@@ -1169,8 +1185,9 @@ function GitHub() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ x: 8, scale: 1.01 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-5 shadow-xl shadow-black/20 transition-all hover:border-[#A78BFA]/30"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-5 shadow-xl shadow-black/20 transition-all hover:border-[#A78BFA]/30 hover:shadow-[#A78BFA]/10"
               >
+                <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(167,139,250,0.07),transparent)] opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="absolute inset-y-0 left-0 w-1 opacity-80" style={{ background: repo.accent }} />
                 <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
                   <div className="min-w-0">
@@ -1332,8 +1349,8 @@ function Learning() {
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/20 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Learning Roadmap" title={<>Currently<br /><GradientText>leveling up</GradientText></>} />
-        <div className="grid max-w-5xl mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <SectionHeading label="Learning Roadmap" title={<>Next layer<br /><GradientText>of capability</GradientText></>} />
+        <div className="grid max-w-6xl mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {LEARNING.map((item, i) => (
             <motion.div
               key={item.title}
@@ -1342,8 +1359,9 @@ function Learning() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
               whileHover={{ y: -6, scale: 1.015 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#08090f]/90 p-5 shadow-2xl shadow-black/20 transition-all hover:border-[#A78BFA]/35 hover:bg-[#101017]"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-6 shadow-2xl shadow-black/20 transition-all hover:border-[#A78BFA]/35 hover:bg-[#101017]"
             >
+              <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#A78BFA]/10 blur-2xl opacity-60 transition-opacity group-hover:opacity-100" />
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/45 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="relative mb-6 flex items-center justify-between gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white p-2 shadow-lg shadow-black/20">
@@ -1351,7 +1369,7 @@ function Learning() {
                 </div>
                 <SkillScore value={item.progress} />
               </div>
-              <h3 className="mb-2 text-base font-bold text-white">{item.title}</h3>
+              <h3 className="mb-2 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-xl font-black text-transparent">{item.title}</h3>
               <p className="mb-5 min-h-[60px] text-sm leading-relaxed text-slate-400">{item.copy}</p>
               <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
                 <motion.div
@@ -1406,20 +1424,21 @@ function Lighthouse() {
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/20 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Performance" title={<>Quality system,<br /><GradientText>not just numbers</GradientText></>} />
+        <SectionHeading label="Performance" title={<>Built to feel<br /><GradientText>fast and composed</GradientText></>} />
 
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-8 shadow-2xl shadow-black/30"
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-8 shadow-2xl shadow-black/30 transition-all hover:border-[#A78BFA]/35"
           >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(34,197,94,0.12),transparent_45%)]" />
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/60 to-transparent" />
             <div className="mb-8 flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-mono uppercase tracking-widest text-[#A78BFA]">Audit Core</p>
-                <h3 className="mt-2 text-2xl font-bold text-white">portfolio.jerintv.dev</h3>
+                <h3 className="mt-2 text-2xl font-bold text-white">uyfy.vercel.app</h3>
               </div>
               <span className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300">Stable</span>
             </div>
@@ -1451,8 +1470,9 @@ function Lighthouse() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ x: 6 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-5 shadow-xl shadow-black/20 transition-all hover:border-[#A78BFA]/30"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/90 p-5 shadow-xl shadow-black/20 transition-all hover:border-[#A78BFA]/30 hover:shadow-[#A78BFA]/10"
               >
+                <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(167,139,250,0.06),transparent)] opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#070708] text-[#A78BFA]">{item.icon}</div>
@@ -1618,33 +1638,35 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/6 py-12">
+    <footer className="relative overflow-hidden border-t border-white/6 py-16">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/50 to-transparent" />
+      <div className="absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-[#A78BFA]/10 blur-3xl" />
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="relative grid gap-8 rounded-3xl border border-white/10 bg-[#08090f]/80 p-6 shadow-2xl shadow-black/30 md:grid-cols-[1fr_auto_1fr] md:items-center">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center text-white font-bold text-sm">J</div>
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-blue-600 text-lg font-black text-white shadow-lg shadow-violet-900/30">J</div>
             <div>
-              <div className="text-white font-semibold text-sm">Jerin T V</div>
-              <div className="text-slate-500 text-xs">Web Designer & Full Stack Developer</div>
+              <div className="bg-gradient-to-r from-white to-violet-200 bg-clip-text text-lg font-black text-transparent">Jerin T V</div>
+              <div className="text-xs text-slate-500">UI/UX Designer + Full Stack Developer</div>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {NAV_LINKS.map((link) => (
-              <button key={link} onClick={() => document.getElementById(link.toLowerCase().replace(" ", "-"))?.scrollIntoView({ behavior: "smooth" })} className="px-3 py-1.5 text-slate-500 hover:text-slate-300 text-xs transition-colors">
+              <button key={link} onClick={() => document.getElementById(link.toLowerCase().replace(" ", "-"))?.scrollIntoView({ behavior: "smooth" })} className="rounded-xl border border-white/10 bg-white/[0.025] px-3 py-2 text-xs text-slate-400 transition-all hover:border-[#A78BFA]/30 hover:text-white">
                 {link}
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-start gap-3 md:justify-end">
             {[{ icon: <Github size={15} />, href: "https://github.com/JerinTV" }, { icon: <Linkedin size={15} />, href: "https://linkedin.com/in/jerin-t-v" }, { icon: <Mail size={15} />, href: "mailto:jerintv0173@gmail.com" }].map((s, i) => (
-              <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg border border-white/10 bg-white/4 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/40 transition-all">
+              <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.035] text-slate-400 transition-all hover:-translate-y-1 hover:border-violet-500/40 hover:text-white">
                 {s.icon}
               </a>
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-white/5 text-center text-slate-600 text-xs">
-          © {new Date().getFullYear()} Jerin T V. Designed & built with React, Tailwind CSS & Framer Motion.
+        <div className="mt-6 text-center text-xs text-slate-600">
+          © {new Date().getFullYear()} Jerin T V. Built with React, Tailwind CSS, and Framer Motion.
         </div>
       </div>
     </footer>
@@ -1695,7 +1717,7 @@ function PremiumCaseStudies() {
     <section id="case-studies" className="py-28 relative overflow-hidden">
       <GlowOrb className="w-96 h-96 bg-violet-800 bottom-0 right-0" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Case Studies" title={<>Product stories<br /><GradientText>in motion</GradientText></>} />
+        <SectionHeading label="Selected Work" title={<>Execution craft,<br /><GradientText>from idea to ship</GradientText></>} />
         <div className="mb-8 flex flex-wrap justify-center gap-3">
           {CASE_STUDIES.map((c, i) => (
             <button key={c.shortTitle || c.title} type="button" onClick={() => setActive(i)} className={`group relative overflow-hidden rounded-2xl px-5 py-3 text-sm font-bold transition-all ${active === i ? "border border-[#A78BFA]/40 bg-[#A78BFA]/15 text-white shadow-lg shadow-[#A78BFA]/10" : "border border-white/10 bg-white/[0.025] text-slate-400 hover:border-white/20 hover:text-white"}`}>
@@ -1704,7 +1726,7 @@ function PremiumCaseStudies() {
             </button>
           ))}
         </div>
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#08090f]/92 shadow-2xl shadow-black/40">
+        <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#08090f]/92 shadow-2xl shadow-black/40 transition-all hover:border-[#A78BFA]/30">
           <div className="absolute inset-0 opacity-50" style={{ background: `radial-gradient(circle at 82% 10%, ${cs.color}28, transparent 34%)` }} />
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
           <AnimatePresence mode="wait">
@@ -1722,6 +1744,19 @@ function PremiumCaseStudies() {
                     </span>
                   ))}
                 </div>
+              </div>
+              <div className="mb-5 grid gap-3 sm:grid-cols-3">
+                {[
+                  { label: "Flow", value: "Research → UI → Build", icon: <Workflow size={15} /> },
+                  { label: "Signal", value: project.stack?.slice(0, 2).join(" + "), icon: <Zap size={15} /> },
+                  { label: "Outcome", value: cs.steps.at(-1)?.phase || "Results", icon: <BadgeCheck size={15} /> },
+                ].map((item) => (
+                  <div key={item.label} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-4">
+                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-[#050508] text-[#A78BFA]">{item.icon}</div>
+                    <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500">{item.label}</div>
+                    <div className="mt-1 text-sm font-bold text-white">{item.value}</div>
+                  </div>
+                ))}
               </div>
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] p-4 md:p-5">
                 <motion.div aria-hidden="true" className="absolute -right-16 -top-16 h-48 w-48 rounded-full border border-white/10" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} />
