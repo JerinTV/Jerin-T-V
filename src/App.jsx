@@ -1232,17 +1232,17 @@ function Credentials() {
               whileHover={{ y: -8, rotateX: 2, rotateY: i % 2 ? -2 : 2 }}
               className="group relative flex h-[390px] w-[310px] shrink-0 flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#08090f]/95 p-3 shadow-2xl shadow-black/30 transition-all hover:border-[#A78BFA]/40 hover:shadow-[#A78BFA]/10 md:w-[360px]"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(167,139,250,0.14),transparent_42%)] opacity-0 transition-opacity group-hover:opacity-100" />
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(167,139,250,0.14),transparent_42%)] opacity-0 transition-opacity group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A78BFA]/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <button
                 type="button"
                 onClick={() => setActiveCredential(credential)}
-                className="relative block aspect-[1.42/1] w-full overflow-hidden rounded-2xl border border-white/10 bg-white"
+                className="relative z-10 block aspect-[1.42/1] w-full overflow-hidden rounded-2xl border border-white/10 bg-white"
                 aria-label={"View " + credential.title}
               >
                 <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f8fafc] p-4 text-left text-slate-950">
-                  <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-violet-200/70 blur-xl" />
-                  <div className="absolute -bottom-10 -left-10 h-28 w-28 rounded-full bg-blue-200/70 blur-xl" />
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-violet-200/70 blur-xl" />
+                  <div className="pointer-events-none absolute -bottom-10 -left-10 h-28 w-28 rounded-full bg-blue-200/70 blur-xl" />
                   <div className="relative flex items-center justify-between">
                     <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-slate-600">
                       Certificate
@@ -1258,7 +1258,7 @@ function Credentials() {
                 </div>
               </button>
 
-              <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
+              <div className="relative z-10 flex flex-1 flex-col px-2 pb-2 pt-4">
                 <div className="mb-3 inline-flex rounded-lg border border-white/10 bg-white/[0.035] px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-slate-400">
                   {credential.category}
                 </div>

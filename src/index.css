@@ -353,6 +353,7 @@ body {
   opacity: 0;
   transition: opacity 220ms ease;
   animation: flowing-border 7s linear infinite;
+  pointer-events: none;
 }
 
 .credential-track article:hover::before {
