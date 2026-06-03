@@ -548,9 +548,9 @@ function Hero() {
       {/* Animated grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+      <div className="max-w-7xl mx-auto px-6 grid gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16 items-center w-full">
         {/* Left */}
-        <div className="order-2 lg:order-1 lg:pl-10 xl:pl-16 text-center lg:text-left">
+        <div className="order-2 mx-auto w-full max-w-2xl pt-3 text-center lg:order-1 lg:mx-0 lg:max-w-none lg:pl-10 lg:pt-0 lg:text-left xl:pl-16">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -566,7 +566,7 @@ function Hero() {
               Jerin T V
             </motion.span>
             <motion.span
-              className="mt-3 block max-w-xl text-2xl font-bold text-white md:text-3xl"
+              className="mx-auto mt-3 block max-w-xl text-2xl font-bold text-white md:text-3xl lg:mx-0"
               initial={{ opacity: 0, x: -18 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.32, duration: 0.65 }}
@@ -588,7 +588,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg"
+            className="mx-auto mb-10 max-w-lg text-lg leading-relaxed text-slate-400 lg:mx-0"
           >
             A UI/UX designer with frontend depth, shaping elegant visual systems, smooth micro-interactions, and premium web interfaces for products that need to stand out.
           </motion.p>
@@ -597,19 +597,19 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4 mb-10"
+            className="mb-10 flex flex-wrap justify-center gap-4 lg:justify-start"
           >
             <motion.button
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white font-semibold shadow-xl shadow-violet-900/40 hover:shadow-violet-900/70 transition-shadow"
+              className="flex min-w-[148px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 px-7 py-3.5 font-semibold text-white shadow-xl shadow-violet-900/40 transition-shadow hover:shadow-violet-900/70"
             >
               Hire Me <ChevronRight size={16} />
             </motion.button>
             <motion.a
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
               href="#"
-              className="flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/15 text-white font-semibold hover:bg-white/6 hover:border-white/25 transition-all"
+              className="flex min-w-[148px] items-center justify-center gap-2 rounded-xl border border-white/15 px-7 py-3.5 font-semibold text-white transition-all hover:border-white/25 hover:bg-white/6"
             >
               <Download size={16} /> Resume
             </motion.a>
@@ -621,7 +621,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-          className="order-1 flex justify-center items-center relative lg:order-2"
+          className="order-1 relative flex items-center justify-center pb-4 sm:pb-5 lg:order-2 lg:pb-0"
         >
           <div className="hero-energy-field relative w-full max-w-[330px] sm:max-w-[390px] lg:max-w-[420px]">
             <motion.div
