@@ -173,7 +173,7 @@ const CASE_STUDIES = [
   },
   {
     shortTitle: "Blockchain",
-    title: "Blockchain Product Detector",
+    title: "Blockchain-based Fake Product Detection",
     subtitle: "Blockchain-based fake product detection with React and Node.js",
     color: "#2563eb",
     steps: [
@@ -899,7 +899,7 @@ function Projects() {
     <section id="projects" className="py-28 relative">
       <GlowOrb className="w-80 h-80 bg-blue-600 top-20 right-0" />
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Projects" title={<>Things I've<br /><GradientText>built & shipped</GradientText></>} sub="Real projects with real constraints — from IoT hardware to blockchain interfaces." />
+        <SectionHeading label="Projects" title={<>Things I've<br /><GradientText>built</GradientText></>} sub="Real projects with real constraints — from IoT hardware to blockchain interfaces." />
 
         <div className="grid lg:grid-cols-3 gap-7">
           {PROJECTS.map((p, i) => (
