@@ -28,9 +28,9 @@ const SKILLS = {
 };
 
 const PROJECTS = [
-  { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed", image: zentodoCover },
+  { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed", image: zentodoCover, codeUrl: "https://github.com/JerinTV/TODO.git", demoUrl: "https://todo-kfdoya5n6-jerintvs-projects.vercel.app" },
   { title: "Blockchain Product Detector", desc: "Role-based dashboards for 4 user types with NFC verification, product lifecycle viz, and hybrid on/off-chain data.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb" },
-  { title: "Smart Helmet Safety Portal", desc: "Real-time IoT dashboard with live GPS map, speed telemetry, emergency alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669" },
+  { title: "Smart Helmet Safety Portal", desc: "Real-time IoT dashboard with live GPS map, speed telemetry, emergency alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669", demoUnavailable: true },
   { title: "AI SaaS Dashboard", desc: "Analytics dashboard with AI-powered insights, real-time charts, and a polished design system.", stack: ["React", "Python", "OpenAI", "PostgreSQL"], color: "#dc2626" },
   { title: "E-Commerce Platform", desc: "Full-featured store with cart, payments, inventory, and admin panel.", stack: ["React", "Django", "Stripe", "PostgreSQL"], color: "#d97706" },
   { title: "Real-Time Chat App", desc: "WebSocket-powered chat with rooms, presence indicators, and message history.", stack: ["React", "Node.js", "Socket.io", "MongoDB"], color: "#0891b2" },
@@ -658,12 +658,18 @@ function Projects() {
                   {p.stack.length > 3 && <span className="px-2 py-0.5 rounded-md bg-white/6 text-slate-400 text-xs">+{p.stack.length - 3}</span>}
                 </div>
                 <div className="flex gap-2">
-                  <a href="https://github.com/JerinTV" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg border border-white/12 text-slate-300 hover:text-white hover:border-white/25 text-xs transition-all">
+                  <a href={p.codeUrl || "https://github.com/JerinTV"} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg border border-white/12 text-slate-300 hover:text-white hover:border-white/25 text-xs transition-all">
                     <Github size={12} /> Code
                   </a>
-                  <button className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-all text-white" style={{ background: `${p.color}25`, border: `1px solid ${p.color}40` }}>
-                    <ExternalLink size={12} /> Demo
-                  </button>
+                  {p.demoUnavailable ? (
+                    <span className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg border border-white/8 bg-white/4 text-slate-500 text-xs font-medium cursor-not-allowed">
+                      <ExternalLink size={12} /> No demo
+                    </span>
+                  ) : (
+                    <a href={p.demoUrl || "https://github.com/JerinTV"} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-all text-white" style={{ background: `${p.color}25`, border: `1px solid ${p.color}40` }}>
+                      <ExternalLink size={12} /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
