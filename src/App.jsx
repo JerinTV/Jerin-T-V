@@ -1240,12 +1240,22 @@ function Credentials() {
                 className="relative block aspect-[1.42/1] w-full overflow-hidden rounded-2xl border border-white/10 bg-white"
                 aria-label={"View " + credential.title}
               >
-                <iframe
-                  title={credential.title + " preview"}
-                  src={credential.href + "#toolbar=0&navpanes=0&scrollbar=0&view=FitH"}
-                  tabIndex={-1}
-                  className="pointer-events-none h-full w-full border-0 bg-white"
-                />
+                <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f8fafc] p-4 text-left text-slate-950">
+                  <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-violet-200/70 blur-xl" />
+                  <div className="absolute -bottom-10 -left-10 h-28 w-28 rounded-full bg-blue-200/70 blur-xl" />
+                  <div className="relative flex items-center justify-between">
+                    <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-slate-600">
+                      Certificate
+                    </span>
+                    <BadgeCheck size={18} className="text-violet-600" />
+                  </div>
+                  <div className="relative">
+                    <FileText size={28} className="mb-3 text-violet-600" />
+                    <h4 className="text-base font-black leading-tight text-slate-950">{credential.title}</h4>
+                    <p className="mt-2 text-xs font-semibold uppercase tracking-widest text-slate-500">{credential.issuer}</p>
+                  </div>
+                  <div className="relative h-px w-full bg-gradient-to-r from-violet-500 via-blue-500 to-transparent" />
+                </div>
               </button>
 
               <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
