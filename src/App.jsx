@@ -589,7 +589,13 @@ function Hero() {
             transition={{ delay: 0.3 }}
             className="mb-6 h-8 text-2xl font-medium text-slate-300"
           >
-              <TypingText words={["UI/UX Designer", "Front-end Designer"]} />
+            <TypingText words={["UI/UX Designer", "Front-end Designer"]} />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
             className="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg"
           >
             A UI/UX designer with frontend depth, shaping elegant visual systems, smooth micro-interactions, and premium web interfaces for products that need to stand out.
