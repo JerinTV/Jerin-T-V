@@ -1,106 +1,119 @@
-# Jerin T V Portfolio
+<h1 align="center">Hi 👋, I'm Jerin T V</h1>
 
-Modern personal portfolio for **Jerin T V**, a Web Designer, Full Stack Developer, UI/UX Designer, and React Developer.
+<h3 align="center">Web Designer | Full Stack Developer | UI/UX Designer | React Developer</h3>
 
-Built with React, Vite, Tailwind CSS, Framer Motion, and Lucide icons.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=900&color=38BDF8&center=true&vCenter=true&width=850&lines=Full+Stack+Developer;React+Developer;UI%2FUX+Designer;Python+%26+Django+Developer;Building+clean+and+responsive+web+experiences" alt="Typing SVG" />
+</p>
 
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=111827)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=JerinTV&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/JerinTV?label=Followers&style=flat&color=0e75b6" alt="GitHub followers" />
+</p>
 
-## Overview
+## About Me
 
-This portfolio is designed to present my skills, projects, case studies, learning roadmap, GitHub presence, and contact details in a polished single-page experience.
+I'm a passionate Full Stack Developer with a strong foundation in web development, UI/UX design, and clean frontend experiences. I enjoy building responsive, user-focused applications and turning ideas into polished digital products.
 
-The site includes animated sections, responsive layouts, project cards, case study timelines, performance highlights, and a contact form UI.
-
-## Features
-
-- Responsive portfolio layout
-- Animated loading screen and page transitions
-- Smooth scroll navigation
-- Project showcase with tech stacks
-- Case study sections for selected work
-- Skills grouped by frontend, backend, database, and tools
-- GitHub profile highlight section
-- Learning roadmap and performance cards
-- Contact section with form validation UI
+- 🔭 All my projects are available at [My GitHub](https://github.com/JerinTV)
+- 🌱 Currently learning **AI Integrations · Docker · AWS · Next.js · System Design · Microservices**
+- 👯 Open to collaborate on **Full-Stack Web Projects, AI-powered apps, and UI-focused products**
+- 🤝 Seeking opportunities in **internships, freelance work, full-time roles, and remote projects**
+- 💬 Ask me about **React · Django · Python · JavaScript · Tailwind CSS · PostgreSQL**
+- 📫 Reach me at **[jerintv0173@gmail.com](mailto:jerintv0173@gmail.com)**
+- 📍 Based in **Kannur, Kerala, India**
 
 ## Tech Stack
 
-- **Frontend:** React, JavaScript, Tailwind CSS
-- **Animation:** Framer Motion
-- **Icons:** Lucide React
-- **Build Tool:** Vite
-- **Deployment Ready:** Vercel or any static hosting provider
+### Languages
 
-## Highlighted Projects
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,python,php,c" alt="Languages" />
+</p>
+
+### Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,bootstrap,vite" alt="Frontend" />
+</p>
+
+### Backend & Frameworks
+
+<p>
+  <img src="https://skillicons.dev/icons?i=django,nodejs,express" alt="Backend" />
+</p>
+
+### Databases
+
+<p>
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,mongodb" alt="Databases" />
+</p>
+
+### Tools & Platforms
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,figma,postman,vscode,vercel,aws,docker" alt="Tools and Platforms" />
+</p>
+
+## Featured Projects
 
 ### Zentodo
 
 Full-stack task management SPA with priority color-coding, subtask nesting, JWT authentication, and REST API endpoints.
 
-**Stack:** React, Django, JWT, PostgreSQL, Vercel
+**Tech:** React · Django · JWT · PostgreSQL · Vercel
 
 ### Blockchain Product Detector
 
 Role-based product verification platform with NFC verification, product lifecycle visualization, and hybrid on-chain/off-chain data flow.
 
-**Stack:** React, Node.js, Express, Blockchain, MySQL
+**Tech:** React · Node.js · Express · Blockchain · MySQL
 
 ### Smart Helmet Safety Portal
 
-Real-time IoT safety dashboard with live GPS map, speed telemetry, emergency alerts, and role-based access.
+Real-time IoT safety dashboard with live GPS tracking, speed telemetry, emergency alerts, and role-based access control.
 
-**Stack:** ESP32, PHP, MySQL, OpenStreetMap, GPS
+**Tech:** ESP32 · PHP · MySQL · OpenStreetMap · GPS
 
-## Getting Started
+## GitHub Stats
 
-Install dependencies:
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=JerinTV&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JerinTV&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</p>
 
-```bash
-npm install
-```
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=JerinTV&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
 
-Start the development server:
+## GitHub Metrics
 
-```bash
-npm run dev
-```
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JerinTV&theme=tokyonight" alt="GitHub Profile Summary" />
+</p>
 
-Build for production:
+## Activity Graph
 
-```bash
-npm run build
-```
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=JerinTV&theme=tokyo-night&hide_border=true" alt="Contribution Graph" />
+</p>
 
-Preview the production build:
+## Let's Connect
 
-```bash
-npm run preview
-```
+<p align="center">
+  <a href="https://github.com/JerinTV">
+    <img src="https://img.shields.io/badge/GitHub-JerinTV-181717?style=for-the-badge&logo=github" alt="GitHub" />
+  </a>
+  <a href="https://linkedin.com/in/jerin-t-v">
+    <img src="https://img.shields.io/badge/LinkedIn-jerin--t--v-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+  </a>
+  <a href="mailto:jerintv0173@gmail.com">
+    <img src="https://img.shields.io/badge/Email-jerintv0173%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
 
-## Project Structure
+---
 
-```text
-src/
-  App.jsx
-  index.css
-  main.jsx
-vite.config.js
-package.json
-README.md
-```
-
-## Contact
-
-- **Email:** [jerintv0173@gmail.com](mailto:jerintv0173@gmail.com)
-- **GitHub:** [github.com/JerinTV](https://github.com/JerinTV)
-- **LinkedIn:** [linkedin.com/in/jerin-t-v](https://linkedin.com/in/jerin-t-v)
-
-## Author
-
-**Jerin T V**
-
-Web Designer & Full Stack Developer from Kannur, Kerala, India.
+<p align="center">
+  <i>"Code is like humor. When you have to explain it, it's bad."</i> - Cory House
+</p>
