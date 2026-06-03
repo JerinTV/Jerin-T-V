@@ -87,8 +87,8 @@ const SKILL_SCORES = {
 
 const PROJECTS = [
   { title: "Zentodo", desc: "Full-stack task management SPA with priority color-coding, subtask nesting, JWT auth, and 10+ REST endpoints.", stack: ["React", "Django", "JWT", "PostgreSQL", "Vercel"], color: "#7c3aed", image: zentodoCover, codeUrl: "https://github.com/JerinTV/TODO.git", demoUrl: "https://todo-kfdoya5n6-jerintvs-projects.vercel.app" },
-  { title: "Blockchain Product Detector", desc: "Role-based dashboards for 4 user types with NFC verification, product lifecycle viz, and hybrid on/off-chain data.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb", image: blockchainCover, codeUrl: "https://github.com/JerinTV/blockchain.git", demoUrl: "https://supply-chain-1-0rut.onrender.com/" },
-  { title: "Smart Helmet Safety Portal", desc: "Real-time IoT dashboard with live GPS map, speed telemetry, emergency alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669", image: smartHelmetCover, codeUrl: "https://github.com/JerinTV/SMART_HELMET.git", demoUnavailable: true },
+  { title: "Blockchain Product Detector", desc: "Blockchain-based fake product detection with React and Node.js dashboards, NFC verification, and role-aware product lifecycle tracking.", stack: ["React", "Node.js", "Express", "Blockchain", "MySQL"], color: "#2563eb", image: blockchainCover, codeUrl: "https://github.com/JerinTV/blockchain.git", demoUrl: "https://supply-chain-1-0rut.onrender.com/" },
+  { title: "Smart Helmet Safety Portal", desc: "ESP32-powered IoT safety portal with live GPS maps, speed telemetry, crash alerts, and 3-role access control.", stack: ["ESP32", "PHP", "MySQL", "OpenStreetMap", "GPS"], color: "#059669", image: smartHelmetCover, codeUrl: "https://github.com/JerinTV/SMART_HELMET.git", demoUnavailable: true },
 ];
 
 const LIVE_PROJECTS = [
@@ -174,13 +174,13 @@ const CASE_STUDIES = [
   {
     shortTitle: "Blockchain",
     title: "Blockchain Product Detector",
-    subtitle: "Trust-first product verification with role-based workflows",
+    subtitle: "Blockchain-based fake product detection with React and Node.js",
     color: "#2563eb",
     steps: [
-      { phase: "Problem", text: "Product authenticity data was fragmented across manufacturers, sellers, and customers. Users needed a simple way to verify origin and lifecycle events." },
+      { phase: "Problem", text: "Fake product checks were hard to trust because manufacturer, seller, and customer records were disconnected." },
       { phase: "Research", text: "Mapped 4 user roles and studied where NFC verification, database records, and blockchain proofs should meet." },
       { phase: "UI Design", text: "Designed separate dashboards for each role, keeping verification status, ownership events, and product history easy to scan." },
-      { phase: "Development", text: "Built a React interface with Node.js and Express APIs, using hybrid on-chain and off-chain data to balance trust, speed, and cost." },
+      { phase: "Development", text: "Built React dashboards with Node.js and Express APIs, using hybrid on-chain and off-chain data to balance trust, speed, and cost." },
       { phase: "Results", text: "Delivered product verification, lifecycle tracking, and role-aware flows that make authenticity checks understandable to non-technical users." },
     ],
   },
@@ -641,10 +641,10 @@ function Hero() {
               viewBox="0 0 420 560"
               aria-hidden="true"
             >
-              <path className="hero-energy-path hero-energy-triangle-outer" pathLength="1000" d="M212 34 C246 42 270 68 276 104 C312 112 334 139 330 176 C363 203 365 246 332 274 C349 322 327 363 288 382 C281 434 246 482 209 501 C165 476 133 435 125 385 C83 368 63 319 84 277 C48 247 52 202 85 176 C81 136 105 111 142 103 C148 66 176 40 212 34 Z" />
-              <path className="hero-energy-path hero-energy-triangle-middle" pathLength="1000" d="M213 58 C239 64 258 85 263 116 C294 122 312 145 307 176 C335 200 337 239 308 263 C324 304 303 338 270 355 C264 404 239 443 209 464 C176 442 153 405 147 358 C112 344 94 305 110 265 C82 241 84 202 112 178 C108 145 127 122 159 116 C164 86 187 64 213 58 Z" />
-              <path className="hero-energy-path hero-energy-triangle-inner" pathLength="1000" d="M211 88 C230 91 245 108 250 132 C273 137 287 154 284 178 C306 198 306 227 283 246 C294 278 278 305 252 318 C248 354 229 386 209 405 C185 386 168 356 164 320 C137 308 124 278 136 248 C114 228 116 199 138 180 C134 154 149 138 174 132 C178 108 192 91 211 88 Z" />
-              <path className="hero-energy-comet hero-energy-triangle-comet" pathLength="1000" d="M212 34 C246 42 270 68 276 104 C312 112 334 139 330 176 C363 203 365 246 332 274 C349 322 327 363 288 382 C281 434 246 482 209 501 C165 476 133 435 125 385 C83 368 63 319 84 277 C48 247 52 202 85 176 C81 136 105 111 142 103 C148 66 176 40 212 34 Z" />
+              <path className="hero-energy-path hero-energy-triangle-outer" pathLength="1000" d="M55 120 L365 120 L210 462 Z" />
+              <path className="hero-energy-path hero-energy-triangle-middle" pathLength="1000" d="M78 138 L342 138 L210 433 Z" />
+              <path className="hero-energy-path hero-energy-triangle-inner" pathLength="1000" d="M102 156 L318 156 L210 403 Z" />
+              <path className="hero-energy-comet hero-energy-triangle-comet" pathLength="1000" d="M55 120 L365 120 L210 462 Z" />
             </svg>
             <motion.img
               src={heroPhoto}
@@ -1110,7 +1110,7 @@ function GitHub() {
   const demoRepos = [
     { name: "zentodo", desc: "Full-stack task management SPA", stars: 12, forks: 3, lang: "JavaScript", color: "#f7df1e", accent: "#A78BFA" },
     { name: "smart-helmet-portal", desc: "IoT safety dashboard with GPS tracking", stars: 9, forks: 2, lang: "Python", color: "#3776ab", accent: "#60a5fa" },
-    { name: "blockchain-product-detector", desc: "NFC product authenticity workflow", stars: 15, forks: 5, lang: "JavaScript", color: "#f7df1e", accent: "#a78bfa" },
+    { name: "blockchain-product-detector", desc: "Blockchain-based fake product detection", stars: 15, forks: 5, lang: "JavaScript", color: "#f7df1e", accent: "#a78bfa" },
   ];
 
   return (
