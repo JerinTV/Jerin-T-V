@@ -16,13 +16,16 @@ import iipWebAppCover from "./assets/iip-web-app-cover.png";
 import watchGalleryCover from "./assets/watch-gallery-cover.png";
 import movieExperienceCover from "./assets/movie-experience-cover.png";
 import northloomCover from "./assets/northloom-cover.png";
+import veloraCover from "./assets/velora-cover.png";
+import aurumRestaurantCover from "./assets/aurum-restaurant-cover.png";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = ["About", "Skills", "Projects", "Case Studies", "Credentials", "GitHub", "Contact"];
+const RESUME_URL = "/resume/jerin-fullstack-resume.pdf";
 
 const STATS = [
-  { label: "Projects Completed", value: 12, suffix: "+" },
+  { label: "Projects Completed", value: 14, suffix: "+" },
   { label: "Technologies Learned", value: 20, suffix: "+" },
   { label: "GitHub Contributions", value: 300, suffix: "+" },
   { label: "Certifications", value: 4, suffix: "" },
@@ -92,6 +95,26 @@ const PROJECTS = [
 ];
 
 const LIVE_PROJECTS = [
+  {
+    title: "AURUM Coastal Table",
+    type: "Restaurant UI",
+    desc: "A cinematic restaurant landing page with elegant typography, moody hospitality visuals, and reservation-focused calls to action.",
+    url: "https://rest-drab-seven.vercel.app",
+    color: "#d6ad61",
+    image: aurumRestaurantCover,
+    icon: <BriefcaseBusiness size={18} />,
+    signal: "Fine dining",
+  },
+  {
+    title: "Velora",
+    type: "Invitation UI",
+    desc: "A premium event invitation interface with editorial spacing, soft luxury styling, and template-driven creation flow.",
+    url: "https://velora-ivory-xi.vercel.app",
+    color: "#8a3a4d",
+    image: veloraCover,
+    icon: <FileText size={18} />,
+    signal: "Event design",
+  },
   {
     title: "Shopping Experience",
     type: "E-commerce UI",
@@ -472,7 +495,9 @@ function Navbar() {
         <div className="flex items-center gap-3">
           <motion.a
             whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-            href="#"
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-semibold shadow-lg shadow-violet-900/40 hover:shadow-violet-900/60 transition-shadow"
           >
             <Download size={14} /> Resume
@@ -496,7 +521,7 @@ function Navbar() {
                 {link}
               </button>
             ))}
-            <a href="#" className="mt-2 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-semibold">
+            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-semibold">
               <Download size={14} /> Download Resume
             </a>
           </motion.div>
@@ -608,7 +633,9 @@ function Hero() {
             </motion.button>
             <motion.a
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-              href="#"
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex min-w-[148px] items-center justify-center gap-2 rounded-xl border border-white/15 px-7 py-3.5 font-semibold text-white transition-all hover:border-white/25 hover:bg-white/6"
             >
               <Download size={16} /> Resume
