@@ -18,6 +18,7 @@ import movieExperienceCover from "./assets/movie-experience-cover.png";
 import northloomCover from "./assets/northloom-cover.png";
 import veloraCover from "./assets/velora-cover.png";
 import aurumRestaurantCover from "./assets/aurum-restaurant-cover.png";
+import porscheCover from "./assets/porsche-cover.png";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 
@@ -95,6 +96,16 @@ const PROJECTS = [
 ];
 
 const LIVE_PROJECTS = [
+  {
+    title: "Porsche",
+    type: "Automotive UI",
+    desc: "A high-impact Porsche concept interface with motorsport-inspired layout, cinematic product focus, and performance-led visual rhythm.",
+    url: "https://porsche-qnql.vercel.app",
+    color: "#38bdf8",
+    image: porscheCover,
+    icon: <Zap size={18} />,
+    signal: "Performance UI",
+  },
   {
     title: "AURUM Coastal Table",
     type: "Restaurant UI",
